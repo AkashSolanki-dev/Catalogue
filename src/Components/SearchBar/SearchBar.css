@@ -1,0 +1,27 @@
+.search-bar {
+  position: relative;
+}
+
+.search-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  background-color: #f0f0f0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.search-icon {
+  font-size: 18px;
+  color: #ccc;
+}
