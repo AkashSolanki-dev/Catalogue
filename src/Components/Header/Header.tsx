@@ -40,7 +40,6 @@ function Header() {
     event: React.ChangeEvent<HTMLSelectElement>
   ) => {
     setCategory(event.target.value as Category)
-    // You can add logic here to filter products based on the selected category
   }
 
   return (

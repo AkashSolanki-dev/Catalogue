@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { ErrorResponse, Product } from '../../../Common/ApiUtils'
+import React from 'react'
+import { Product } from '../../../Common/ApiUtils'
 import ProductCard from '../Product-Card/ProductCard'
 
 interface ProductListProps {
