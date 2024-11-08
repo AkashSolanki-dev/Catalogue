@@ -3,24 +3,11 @@ import { Product, retrieveProducts, ErrorResponse } from '../../Common/ApiUtils'
 import ProductList from './Products-List/ProductsList'
 import { FilterContext } from '../../Context/FilterContext'
 
-const ProductContainer: React.FC = () => {
+const ProductContainer: React.FC<{ fetchedProducts: Product[] }> = ({
+  fetchedProducts,
+}) => {
   const [products, setProducts] = useState<Product[] | ErrorResponse[]>([])
   const { searchTerm, category } = useContext(FilterContext)
-  const [fetchedProducts, setFetchedProducts] = useState<Product[]>()
-
-  useEffect(() => {
-    // Fetch products from API
-    const getProducts = async () => {
-      try {
-        const productsFromServer = await retrieveProducts()
-        setFetchedProducts(productsFromServer as Product[])
-        setProducts(productsFromServer)
-      } catch (error) {
-        console.error('Error retrieving products:', error)
-      }
-    }
-    getProducts()
-  }, [])
 
   useEffect(() => {
     // Filter products based on search term and category
