@@ -10,8 +10,14 @@ interface CartState {
   totalItems: number
 }
 
+export enum Type {
+  ADD_ITEM = 'ADD_ITEM',
+  REMOVE_ITEM = 'REMOVE_ITEM',
+  CLEAR_CART = 'CLEAR_CART',
+}
+
 interface CartAction {
-  type: 'ADD_ITEM' | 'REMOVE_ITEM' | 'CLEAR_CART'
+  type: Type
   payload?: CartItem
 }
 

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { CartContext } from '../../Context/CartContext'
+import { CartContext, Type } from '../../Context/CartContext'
 import './Cart.css'
 
 export interface CartProduct {
@@ -19,11 +19,11 @@ const Cart: React.FC = () => {
   )
 
   const handleDelete = (product: CartProduct) => {
-    dispatch({ type: 'REMOVE_ITEM', payload: { product } })
+    dispatch({ type: Type.REMOVE_ITEM, payload: { product } })
   }
 
   const clearCart = () => {
-    dispatch({ type: 'CLEAR_CART' })
+    dispatch({ type: Type.CLEAR_CART })
   }
 
   return (

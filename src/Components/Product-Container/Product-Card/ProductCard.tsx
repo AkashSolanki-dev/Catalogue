@@ -1,7 +1,7 @@
 import './ProductCard.css'
 import { Product } from '../../../Common/ApiUtils'
 import { useContext, useEffect, useState } from 'react'
-import { CartContext } from '../../../Context/CartContext'
+import { CartContext, Type } from '../../../Context/CartContext'
 import { CartProduct } from '../../Cart/Cart'
 
 const ProductCard = ({ product }: { product: Product }) => {
@@ -24,7 +24,7 @@ const ProductCard = ({ product }: { product: Product }) => {
     }
 
     dispatch({
-      type: 'ADD_ITEM',
+      type: Type.ADD_ITEM,
       payload: { product: addedProduct },
     })
   }, [quantity])

@@ -1,6 +1,6 @@
 import SearchBar from '../SearchBar/SearchBar'
 import './Header.css'
-import { FilterContext, FilterContextType } from '../../Context/FilterContext'
+import { FilterContext } from '../../Context/FilterContext'
 import { useContext, useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { CartContext } from '../../Context/CartContext'
