@@ -15,7 +15,7 @@ const FilterContext = createContext<FilterContextType>({
   setSearchTerm: () => {},
 })
 
-export const FilterContextProvider: React.FC<{ children: ReactNode }> = ({
+const FilterContextProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const [category, setCategory] = useState<Category>(Category.None)
